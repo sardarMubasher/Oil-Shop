@@ -1,0 +1,93 @@
+.Products{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    /* margin-top: 3rem; */
+    width: 90%;
+    gap: 2rem;
+    margin: 0 auto;
+}
+.Products>:nth-child(1)
+{
+    text-align: center;
+    font-weight: bold;
+    font-size: 2rem;
+}
+
+.P-Wrapper{
+    display: grid;
+    width: 100%;
+    grid-template-columns: repeat(3,1fr);
+    gap: 5rem  2rem;
+}
+.card{
+   
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+    width: 100%;
+    
+}
+.card>img{
+    width: 80%;
+    height: 50%;
+    object-fit: contain;
+}
+.card>:nth-child(2)
+{
+    font-weight: bold;
+    font-size: 1.5rem;
+}
+.card>:nth-child(3)
+{
+    font-weight: 600;
+    font-size: 1rem;
+    text-align: center;
+    color: rgba(0, 0, 0, 0.784);
+    padding: 0 3rem;
+}
+.card>:nth-child(4)
+{
+    font-weight: bold;
+    font-size: 1rem;
+}
+.p-button{
+    background-color: white;
+    color: black;
+    font-weight: 600;
+    padding: 4px 16px;
+    height: 3rem;
+    border-radius: 10px;
+    border: 2px solid rgba(0, 0, 0, 0.643);
+    cursor: pointer;
+    
+}
+
+.p-button:hover{
+    background-color: var(--green);
+    border: 2px solid var(--green);
+}
+
+@media (max-width:915px) {
+    
+    .P-Wrapper{
+      
+        grid-template-columns: repeat(2,1fr);
+        gap: 5rem  3rem;
+    }
+}
+
+@media (max-width:615px) {
+    
+    .P-Wrapper{
+      
+        grid-template-columns: repeat(1,1fr);
+        gap: 5rem  2rem;
+    }
+    .card>:nth-child(3)
+{
+    padding: 0 .5rem;
+}
+}
